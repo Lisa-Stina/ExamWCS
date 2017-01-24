@@ -28,18 +28,15 @@
 <!-- fin slider---------------------------------------------------------------->
 <!-- début  list hotel -------------------------------------------------------->
     <ul class="list-unstyled">
-    				<li class="hotel" style="background: white url(/photos/hotel/corinthiahotelbudapest/{{hotel.photos}}) no-repeat"
-    					ng-repeat="hotel in hotels">
-    					<div class="book-details clearfix">
+    				<li class="hotel" ng-repeat="hotel in hotels">
+    					<div class="hotel-details clearfix">
     						<h2>{{hotel.name}}</h2>
     						<ul class="list-unstyled list-inline">
     							<li><p>{{hotel.stars}} étoiles</p></li><br>
     							<li><p>{{hotel.description}}</p></li><br>
-                  <ul class="list-unstyled list-inline">
-                    <li class="hotel" style="background: white url(/photos/hotel/corinthiahotelbudapest/{{hotel.photos}}) no-repeat"
-            					ng-repeat="hotel in hotels"><h4>Chambre {{rooms.type}}</h4></li>
-                  </ul>
-    						</ul>
+                </ul>
+                    <div class="thumbnail small-image pull-left" ng-repeat="hotel in hotels"><img ng-src="{{hotel.photos[0]}}" /></div>
+
     						<button class="btn btn-info pull-right" ng-click="addToKart(hotel)">Réserver</button>
     					</div>
     				</li>

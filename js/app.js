@@ -30,6 +30,15 @@ myApp.config(function($routeProvider) {
 });
 
 //Create controller
+myApp.controller("HomeCtrl", function($scope, hotelService) {
+
+});
+myApp.controller("CreateCtrl", function($scope) {
+
+});
+myApp.controller("ConnectCtrl", function($scope) {
+
+});
 myApp.controller("HeaderCtrl", function($scope, $location) {
   $scope.appDetails = {};
   $scope.appDetails.title = "HoBook";
@@ -63,6 +72,7 @@ myApp.controller("HeaderCtrl", function($scope, $location) {
     kartService.buy(hotel);
   }
 });
+
 
   //Create services with factory
   //Create another factory
