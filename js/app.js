@@ -67,6 +67,7 @@ myApp.controller("HeaderCtrl", function($scope, $location) {
   	}
   });
   myApp.controller("KartListCtrl", function($scope, kartService) {
+
   $scope.kart = kartService.getKart();
   $scope.buy = function(hotel){
     kartService.buy(hotel);

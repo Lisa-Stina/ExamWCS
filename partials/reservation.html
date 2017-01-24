@@ -1,0 +1,20 @@
+<div id="bookListWrapper">
+  <div>
+    <ul class="list-unstyled marginslide">
+      <li ng-repeat="hotel in kart">
+        <div class="hotel-details clearfix">
+          <h3>{{hotels.name}}</h3>
+          <p>Price: {{hotel.price | currency:'$'}}</p>
+          <ul class="list-unstyled list-inline">
+            <li>Nombre d'étoiles: {{hotel.stars}}</li><br>
+            <li>Binding: {{hotel.descrition | uppercase}}</li><br>
+            <li>Publisher: {{book.publisher}}</li><br>
+            <li>Released: {{book.releaseDate}}</li><br>
+          </ul>
+          <p>{{book.details}} <a href='#'>View More<a></p>
+          <button class="btn btn-info pull-right" ng-click="buy(hotel)">Réserver</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
