@@ -21,11 +21,16 @@
                   </div>
                   <div class="col-xs-12">
                     <div class="">
-                      <ul class="list-unstyled list-inline">
-                        <li ng-repeat="room in hotel.rooms">{{room.type | uppercase}}</li>
-                        <li ng-repeat="room in hotel.rooms">{{room.price | currency:"€"}}</li>
-                        <li ng-repeat="room in hotel.rooms">{{room.description}}</li>
-                      </ul>
+                      <div class="list-unstyled list-inline" ng-repeat="room in hotel.rooms">
+                        <p>{{room.type | uppercase}}</p>
+                        <p>{{room.price + hotel.currency}}</p>
+                        <p>{{room.description}}</p>
+
+                        <div class="thumbnail" ng-repeat="photo in room.photos">
+                          <img ng-src="{{photo}}"/>
+                        </div>
+
+                      </div>
                     </div>
                   </div>
                 </div>

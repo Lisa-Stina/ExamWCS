@@ -54,8 +54,8 @@ myApp.controller("HeaderCtrl", function($scope, $location) {
 
   myApp.controller("KartListCtrl", function($scope, kartService) {
   $scope.kart = kartService.getKart();
-  $scope.buy = function(book){
-    kartService.buy(book);
+  $scope.buy = function(hotel){
+    kartService.buy(hotel);
   }
 });
 
@@ -97,7 +97,7 @@ myApp.factory("kartService", function() {
       {
         "name": "Corinthia Hotel Budapest",
         "stars": 5,
-        "description": "Hotel 5 étoiles de charmes (et oui nous sommes à Budapest !) ",
+        "description": "Hotel de charme (eh oui nous sommes à Budapest!)",
         "photos": [
             "/photos/hotel/corinthiahotelbudapest/1.jpg",
             "/photos/hotel/corinthiahotelbudapest/2.jpg",
@@ -114,9 +114,9 @@ myApp.factory("kartService", function() {
             ],
             "price": 730
         }, {
-            "type": "Chambre Double deluxe",
+            "type": "Chambre Double Deluxe",
             "number": 50,
-            "description": "il se dit que un maitre shaolin à dormis ici !",
+            "description": "Il se dit qu'un maitre shaolin a dormit ici!",
             "photos": [
                 "/photos/room/corinthiahotelbudapest/2.jpg",
                 "/photos/room/corinthiahotelbudapest/4.jpg"
@@ -125,7 +125,7 @@ myApp.factory("kartService", function() {
         }, {
             "type": "Chambre Double Luxe",
             "number": 25,
-            "description": "Parfait pour vous reposez entre deux vols si vous êtes un homme d'affaire !",
+            "description": "Parfait pour vous reposer entre deux vols si vous êtes un homme d'affaire!",
             "photos": [
                 "/photos/room/corinthiahotelbudapest/3.jpg",
                 "/photos/room/corinthiahotelbudapest/6.jpg"
@@ -143,35 +143,35 @@ myApp.factory("kartService", function() {
         }],
         "reviews": [{
             "name": "Blue l'oiseau",
-            "review": "Non mais c'est géniale, j'ai même eu le droit a ma vollière",
+            "review": "Non mais c'est géniale, j'ai même eu le droit à ma vollière",
             "rating": 4
         }]
     }, {
         "name": "Grand Hotel Palatino",
         "stars": 4,
-        "description": "A 5 minutes du colisée, cette hotel vous ravieras si vous souhaitez visiter Rome et ses alentours.",
+        "description": "A 5 minutes du Colisée, cette hôtel vous raviera, si vous souhaitez visiter Rome et ses alentours.",
         "photos": ["/photos/hotel/grandhotelpalatino/1.jpg", "/photos/hotel/grandhotelpalatino/2.jpg", "/photos/hotel/grandhotelpalatino/3.jpg"],
         "currency": "€",
         "rooms": [{
-            "type": "Chambre double standard plus",
+            "type": "Chambre Double Standard +",
             "number": 10,
             "description": "Une chambre de bonne quoi",
             "photos": ["/photos/room/grandhotelpalatino/2.jpg", "/photos/room/grandhotelpalatino/5.jpg"],
             "price": 312.5
         }, {
-            "type": "Chambre double standar plus plus",
+            "type": "Chambre Double Standar + +",
             "number": 25,
             "description": "Un peu plus grande que la première",
             "photos": ["/photos/room/grandhotelpalatino/3.jpg", "/photos/room/grandhotelpalatino/2.jpg"],
             "price": 322.5
         }, {
-            "type": "Chambre double Supérieur",
+            "type": "Chambre Double Supérieur",
             "number": 3,
             "description": "Chambre de ouf",
             "photos": ["/photos/room/grandhotelpalatino/1.jpg"],
             "price": 352.5
         }, {
-            "type": "Chambre triple",
+            "type": "Chambre Triple",
             "number": 13,
             "description": "Pour 3 personnes oklm",
             "photos": ["/photos/room/grandhotelpalatino/3.jpg"],
@@ -201,14 +201,14 @@ myApp.factory("kartService", function() {
         "rooms": [{
             "type": "Chambre simple",
             "number": 50,
-            "description": "Une petite chambre à 1000€ oue et alors ?",
-            "photos": ["/photos/room/danncarltonbelfort/2.jpg", "/photos/room/danncarltonbelfortmedellin/5.jpg"],
+            "description": "Une petite chambre à 1000€ ouai et alors ?",
+            "photos": ["/photos/room/danncarltonbelfort/2.jpg", "/photos/room/danncarltonbelfort/5.jpg"],
             "price": 1000
         }, {
             "type": "Chambre double",
             "number": 30,
-            "description": "Une chambre double à 1200€ oue et alors ?",
-            "photos": ["/photos/room/danncarltonbelfort/4.jpg", "/photos/room/danncarltonbelfortmedellin/3.jpg"],
+            "description": "Une chambre double à 1200€ ouai et alors ?",
+            "photos": ["/photos/room/danncarltonbelfort/4.jpg", "/photos/room/danncarltonbelfort/3.jpg"],
             "price": 1200
         }, {
             "type": "Suite",
