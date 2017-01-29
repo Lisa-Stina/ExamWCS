@@ -1,43 +1,49 @@
 <div class="container-fluid" id="marginslide">
-
-<!-- début  list hotel -------------------------------------------------------->
+  <div class="row">
+    <!-- début  list hotel -------------------------------------------------------->
     <ul class="list-unstyled">
-    				<li class="hotel" ng-repeat="hotel in hotels">
-    					<div class="hotel-details clearfix">
-    						<h2>{{hotel.name}}</h2>
-    						<ul class="list-unstyled list-inline">
-    							<li><p>{{hotel.stars}} étoiles</p></li><br>
-    							<li><p>{{hotel.description}}</p></li><br>
-                </ul>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <ul class="list-unstyled list-inline">
-                      <li ng-repeat="photo in hotel.photos">
-                        <div class="thumbnail">
-                          <img ng-src="{{photo}}" />
-                        </div>
-                    </li>
-                  </ul>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="">
-                      <div class="list-unstyled list-inline" ng-repeat="room in hotel.rooms">
-                        <p>{{room.type | uppercase}}</p>
-                        <p>{{room.price + hotel.currency}}</p>
-                        <p>{{room.description}}</p>
-
-                        <div class="thumbnail" ng-repeat="photo in room.photos">
-                          <img ng-src="{{photo}}"/>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
+      <li class="hotel" ng-repeat="hotel in hotels">
+        <div class="hotel-details clearfix">
+          <h2>{{hotel.name}}</h2>
+          <ul class="list-unstyled list-inline">
+            <li><p>{{hotel.description|uppercase}}</p></li><br>
+            <li><p>{{hotel.stars}} étoiles</p></li><br>
+          </ul>
+          <button class="btn btn-info btn-pull-right" ng-click="addToKart(hotel)">Réserver</button>
+          <br>
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="list-unstyled list-inline">
+              <li ng-repeat="photo in hotel.photos">
+                <div class="thumbnail">
+                  <img ng-src="{{photo}}" />
                 </div>
-    						<button class="btn btn-info pull-right" ng-click="addToKart(hotel)">Réserver</button>
-    					</div>
-    				</li>
-    </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container-fuid">
+          <div class="row">
+            <div class="col-xs-12">
+
+              <div class="list-unstyled list-inline" ng-repeat="room in hotel.rooms">
+                <p>{{room.type | uppercase}}</p>
+                <p>{{room.price + hotel.currency}}</p>
+
+                <div class="thumbnail imgroom" ng-repeat="photo in room.photos">
+                  <img ng-src="{{photo}}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 
 <!-- fin list hotel ----------------------------------------------------------->
 

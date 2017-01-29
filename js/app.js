@@ -97,7 +97,7 @@ myApp.factory("kartService", function() {
       {
         "name": "Corinthia Hotel Budapest",
         "stars": 5,
-        "description": "Hotel de charme (eh oui nous sommes à Budapest!)",
+        "description": "Hotel de charme",
         "photos": [
             "/photos/hotel/corinthiahotelbudapest/1.jpg",
             "/photos/hotel/corinthiahotelbudapest/2.jpg",

@@ -8,6 +8,7 @@
   margin-right: 20px;
   margin-top: 8px;
 }
+
 #marginslide {
   margin-top: 80px;
 }
@@ -246,4 +247,12 @@ li,p {
 }
 .panel {
   background-color: #FFC235!important;
+}
+.imgroom {
+  height: auto;;
+  width: auto;
+}
+.align {
+  margin-top: 100px;
+  text-align: center!important;
 }
