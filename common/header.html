@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderCtrl">
+  <div class="container">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand logo">{{appDetails.title}}</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-nav-demo">
+        <button type="button" class="btn btn-warning pull-right" ng-class="{active: nav.isActive('/connect')}"><a href="#/connect">Se connecter</a></button>
+        <button type="button" class="btn btn-warning pull-right" ng-class="{active: nav.isActive('/create')}"><a href="#/create">Sinscrire</a></button>
+        <button type="button" class="btn btn-warning pull-right" ng-class="{active: nav.isActive('/hoteList')}"><a href="#/hoteList">Hôtels</a></button>
+        <button type="button" class="btn btn-warning pull-right" ng-class="{active: nav.isActive('/reservation')}"><a href="#/reservation">Mes réservations</a></button>
+    </div>
+  </div>
+</nav>

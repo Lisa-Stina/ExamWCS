@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ["ngRoute"]);
 
-//Create the routes with .config
+//Create the routes 
 myApp.config(function($routeProvider) {
   $routeProvider
     .when("/create", {
