@@ -30,7 +30,7 @@
             <div class="col-xs-12">
 
               <div class="list-unstyled list-inline" ng-repeat="room in hotel.rooms">
-                <p>{{room.type | uppercase}}</p>
+                <p>CHAMBRE {{room.type | uppercase}}</p>
                 <p>{{room.price + hotel.currency}}</p>
 
                 <div class="thumbnail imgroom" ng-repeat="photo in room.photos">

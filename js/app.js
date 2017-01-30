@@ -35,7 +35,30 @@ myApp.controller("HomeCtrl", function($scope, hotelService) {
 });
 myApp.controller("CreateCtrl", function($scope) {
 
+  return {
+    restrict: 'A', // S'utilise uniquement en tant qu'attribut
+    scope: true,
+    require: 'ngModel',
+    link: function (scope, elem, attrs, control) {
+        var check = function () {
+            //Valeur du champs courant
+            var v1 = scope.$eval(attrs.ngModel); // attrs.ngModel = “ConfirmPassword”
+
+            //valeur du champ à comparer
+            var v2 = scope.$eval(attrs.CreateCtrl).$viewValue; // attrs.equalsTo = “Password”
+
+            return v1 == v2;
+        };
+
+        scope.$watch(check, function (isValid) {
+            // Défini si le champ est valide
+            control.$setValidity("CreateCtrl", isValid);
+        });
+    }
+  };
+
 });
+
 myApp.controller("ConnectCtrl", function($scope) {
 
 });
@@ -74,9 +97,8 @@ myApp.controller("HeaderCtrl", function($scope, $location) {
   }
 });
 
-
-  //Create services with factory
-  //Create another factory
+//Create services with factory
+//Create another factory
 myApp.factory("kartService", function() {
   var kart = [];
 

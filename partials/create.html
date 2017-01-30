@@ -2,26 +2,29 @@
     <div class="row">
         <div class="col-xs-12">
             <legend><a href="#"><i class="glyphicon glyphicon-globe"></i></a> Inscription!</legend>
-            <form action="#" method="post" class="form" role="form">
+            <form class="form" role="form" name="registerForm">
             <div class="row">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="firstname" placeholder="Nom" type="text"
-                        required autofocus />
+                        required autofocus ng-model="firstName" />
                 </div>
 
                 <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="lastname" placeholder="Prénom" type="text" required />
+                    <input class="form-control" name="lastname" placeholder="Prénom" type="text" required ng-model="lastName"/>
                 </div>
             </div>
             <br />
-            <input class="form-control" name="youremail" placeholder="Email" type="email" />
+            <input class="form-control" name="youremail" placeholder="Email" type="email" ng-model="email"/>
             <br />
-            <input class="form-control" name="reenteremail" placeholder="Confirmation Email" type="email" />
+            <input class="form-control" name="reenteremail" placeholder="Confirmation Email" type="email" ng-model="confirmEmail" />
             <br />
-            <input class="form-control" name="password" placeholder="Mot de passe" type="password" />
+            <input class="form-control" name="password" placeholder="Mot de passe" type="password" required ng-minlength="6" name="password" ng-model="password"/>
+            <span class="text-danger col-sm-offset-3" ng-show="registerForm.password.$error.minlength">
+              Le mot de passe doit contenir au minimum 6 caractères.
+            </span>
             <br />
             <br />
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up" ng-disabled="registerForm.$invalid">
                 S'inscrire</button>
             </form>
         </div>
