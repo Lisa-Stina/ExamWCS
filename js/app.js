@@ -39,18 +39,18 @@ myApp.controller("CreateCtrl", function($scope) {
     restrict: 'A', // S'utilise uniquement en tant qu'attribut
     scope: true,
     require: 'ngModel',
-    link: function (scope, elem, attrs, control) {
+    link: function ($scope, elem, attrs, control) {
         var check = function () {
             //Valeur du champs courant
-            var v1 = scope.$eval(attrs.ngModel); // attrs.ngModel = “ConfirmPassword”
+            var v1 = $scope.$eval(attrs.ngModel); // attrs.ngModel = “ConfirmPassword”
 
             //valeur du champ à comparer
-            var v2 = scope.$eval(attrs.CreateCtrl).$viewValue; // attrs.equalsTo = “Password”
+            var v2 = $scope.$eval(attrs.CreateCtrl).$viewValue; // attrs.equalsTo = “Password”
 
             return v1 == v2;
         };
 
-        scope.$watch(check, function (isValid) {
+        $scope.$watch(check, function (isValid) {
             // Défini si le champ est valide
             control.$setValidity("CreateCtrl", isValid);
         });
@@ -60,8 +60,29 @@ myApp.controller("CreateCtrl", function($scope) {
 });
 
 myApp.controller("ConnectCtrl", function($scope) {
+  return {
+    restrict: 'A', // S'utilise uniquement en tant qu'attribut
+    scope: true,
+    require: 'ngModel',
+    link: function ($scope, elem, attrs, control) {
+        var check = function () {
+            //Valeur du champs courant
+            var v1 = $scope.$eval(attrs.ngModel); // attrs.ngModel = “ConfirmPassword”
 
+            //valeur du champ à comparer
+            var v2 = $scope.$eval(attrs.ConnectCtrl).$viewValue; // attrs.equalsTo = “Password”
+
+            return v1 == v2;
+        };
+
+        $scope.$watch(check, function (isValid) {
+            // Défini si le champ est valide
+            control.$setValidity("ConnectCtrl", isValid);
+        });
+    }
+  };
 });
+
 myApp.controller("HeaderCtrl", function($scope, $location) {
   $scope.appDetails = {};
   $scope.appDetails.title = "HoBook";

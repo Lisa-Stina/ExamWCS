@@ -6,19 +6,19 @@
             <div class="row">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="firstname" placeholder="Nom" type="text"
-                        required autofocus ng-model="firstName" />
+                         ng-model="firstName" required />
                 </div>
 
                 <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="lastname" placeholder="Prénom" type="text" required ng-model="lastName"/>
+                    <input class="form-control" name="lastname" placeholder="Prénom" type="text" ng-model="lastName" required />
                 </div>
             </div>
             <br />
-            <input class="form-control" name="youremail" placeholder="Email" type="email" ng-model="email"/>
+            <input class="form-control" name="youremail" placeholder="Email" type="email" ng-model="email" required/>
             <br />
-            <input class="form-control" name="reenteremail" placeholder="Confirmation Email" type="email" ng-model="confirmEmail" />
+            <input class="form-control" name="reenteremail" placeholder="Confirmation Email" type="email" ng-model="confirmEmail" required/>
             <br />
-            <input class="form-control" name="password" placeholder="Mot de passe" type="password" required ng-minlength="6" name="password" ng-model="password"/>
+            <input class="form-control" name="password" placeholder="Mot de passe" type="password" ng-minlength="6" name="password" ng-model="password" required/>
             <span class="text-danger col-sm-offset-3" ng-show="registerForm.password.$error.minlength">
               Le mot de passe doit contenir au minimum 6 caractères.
             </span>
